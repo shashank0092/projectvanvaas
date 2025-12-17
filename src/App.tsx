@@ -1,6 +1,6 @@
 import { Routes, Route, useNavigate } from "react-router-dom";
 import SplashScreen from "./components/SplashScreen";
-// import Login from "./pages/Login";
+import Login from "./pages/Login";
 
 const Home = () => {
   return null;
@@ -22,7 +22,7 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<SplashRoute />} />
-      {/* <Route path="/login" element={<Login />} /> */}
+      <Route path="/login" element={<Login />} />
       <Route path="/home" element={<Home />} />
     </Routes>
   );
