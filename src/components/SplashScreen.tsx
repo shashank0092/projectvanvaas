@@ -130,21 +130,21 @@ const SplashScreen = ({ onComplete }: SplashScreenProps) => {
         >
           <g transform="translate(150, 150) scale(1.2)">
             {/* Center Petal */}
-            <path
+              <path
               className="lotus-path"
               d="M 0,-10 C -15,-30 -15,-60 0,-90 C 15,-60 15,-30 0,-10"
             />
 
             {/* Inner Left Petal */}
-            <path
+              <path
               className="lotus-path"
               d="M -10,-5 C -35,-25 -45,-55 -30,-80 C -25,-60 -10,-35 -5,-15"
             />
             {/* Inner Right Petal */}
-            <path
+              <path
               className="lotus-path"
               d="M 10,-5 C 35,-25 45,-55 30,-80 C 25,-60 10,-35 5,-15"
-            />
+          />
 
             {/* Middle Left Petal */}
             <path
@@ -152,21 +152,21 @@ const SplashScreen = ({ onComplete }: SplashScreenProps) => {
               d="M -20,0 C -50,-10 -70,-40 -60,-70 C -60,-50 -40,-20 -15,-5"
             />
             {/* Middle Right Petal */}
-            <path
+                <path
               className="lotus-path"
               d="M 20,0 C 50,-10 70,-40 60,-70 C 60,-50 40,-20 15,-5"
             />
 
             {/* Outer Left Bottom Petal */}
-            <path
+                <path
               className="lotus-path"
               d="M -25,5 C -60,5 -85,-15 -80,-40 C -75,-25 -50,10 -10,0"
             />
             {/* Outer Right Bottom Petal */}
-            <path
+                <path
               className="lotus-path"
               d="M 25,5 C 60,5 85,-15 80,-40 C 75,-25 50,10 10,0"
-            />
+                />
 
             {/* Base curve */}
             <path className="lotus-path" d="M -25,5 Q 0,15 25,5" />
@@ -244,7 +244,7 @@ const SplashScreen = ({ onComplete }: SplashScreenProps) => {
           >
             An Initiative by
           </Typography>
-          <Typography
+        <Typography
             sx={{
               fontFamily: '"Poppins", "Arial", sans-serif',
               fontSize: { xs: "16px", sm: "17px", md: "18px" },

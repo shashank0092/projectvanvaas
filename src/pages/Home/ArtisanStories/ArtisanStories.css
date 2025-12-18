@@ -1,0 +1,245 @@
+/* ============================================
+   ARTISAN STORIES SECTION
+   ============================================ */
+.artisan-stories {
+  background: linear-gradient(180deg, #f5efe3 0%, #f8f4ec 50%, #faf8f5 100%);
+  min-height: 100vh;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ============================================
+   BACKGROUND ILLUSTRATION
+   ============================================ */
+.artisan-bg-illustration {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.8;
+}
+
+.charkha,
+.pottery-tools,
+.carving-tools {
+  opacity: 0.7;
+}
+
+.loom-pattern,
+.shuttle,
+.needle-thread {
+  opacity: 0.5;
+}
+
+.corner-pattern,
+.border-lines {
+  opacity: 0.4;
+}
+
+/* ============================================
+   CONTENT WRAPPER
+   ============================================ */
+.artisan-content-wrapper {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+  max-width: 900px;
+}
+
+/* Top Decorative Line */
+.artisan-top-line {
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #c77b30, transparent);
+  margin-bottom: 32px;
+}
+
+/* English Title */
+.artisan-english-title {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards;
+  animation-delay: 0.2s;
+}
+
+/* Animated Text Container */
+.artisan-text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  perspective: 1000px;
+}
+
+.artisan-text-container.transitioning .text-block {
+  animation: textExit 0.6s cubic-bezier(0.55, 0.055, 0.675, 0.19) forwards;
+}
+
+.artisan-text-container .text-block {
+  animation: textEnter 1s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.artisan-animated-text.line-1 {
+  animation: lineReveal 1s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.artisan-animated-text.line-2 {
+  animation: lineReveal 1s cubic-bezier(0.22, 0.61, 0.36, 1) 0.2s both;
+}
+
+@keyframes textEnter {
+  0% {
+    opacity: 0;
+    transform: translateY(50px) rotateX(15deg);
+    filter: blur(10px);
+  }
+  30% {
+    opacity: 0.4;
+    filter: blur(5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) rotateX(0deg);
+    filter: blur(0);
+  }
+}
+
+@keyframes textExit {
+  0% {
+    opacity: 1;
+    transform: translateY(0) rotateX(0deg);
+    filter: blur(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-30px) rotateX(-10deg);
+    filter: blur(8px);
+  }
+}
+
+@keyframes lineReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+    filter: blur(6px);
+    letter-spacing: 0.1em;
+  }
+  50% {
+    opacity: 0.7;
+    filter: blur(2px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+    letter-spacing: normal;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* CTA Button */
+.artisan-cta {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards;
+  animation-delay: 0.6s;
+}
+
+/* ============================================
+   BOTTOM DECORATIVE ELEMENT
+   ============================================ */
+.artisan-bottom-deco {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 48px;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards;
+  animation-delay: 0.8s;
+}
+
+.artisan-bottom-deco .deco-line {
+  width: 40px;
+  height: 1px;
+  background: rgba(199, 123, 48, 0.4);
+}
+
+.artisan-bottom-deco .deco-diamond {
+  width: 8px;
+  height: 8px;
+  background: #c77b30;
+  transform: rotate(45deg);
+  opacity: 0.6;
+}
+
+/* ============================================
+   RESPONSIVE STYLES
+   ============================================ */
+@media (max-width: 900px) {
+  .artisan-content-wrapper {
+    padding: 30px 20px;
+  }
+
+  .artisan-bg-illustration {
+    opacity: 0.5;
+  }
+}
+
+@media (max-width: 600px) {
+  .artisan-stories {
+    padding: 60px 0;
+  }
+
+  .artisan-content-wrapper {
+    padding: 20px 16px;
+  }
+
+  .artisan-top-line {
+    background: linear-gradient(90deg, transparent, #c77b30, transparent);
+  }
+
+  .artisan-bottom-deco {
+    justify-content: center;
+    margin-top: 32px;
+  }
+
+  .artisan-bg-illustration {
+    opacity: 0.3;
+  }
+}
+
+/* ============================================
+   PREFERS REDUCED MOTION
+   ============================================ */
+@media (prefers-reduced-motion: reduce) {
+  .artisan-english-title,
+  .artisan-cta,
+  .artisan-bottom-deco {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+
+  .artisan-text-container .text-block,
+  .artisan-animated-text.line-1,
+  .artisan-animated-text.line-2 {
+    animation: none;
+  }
+}

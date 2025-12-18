@@ -1,0 +1,242 @@
+/* ============================================
+   HOW IT WORKS SECTION
+   ============================================ */
+.howitworks-section {
+  background: linear-gradient(180deg, #f5efe3 0%, #f8f4ec 50%, #faf8f5 100%);
+  min-height: 100vh;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ============================================
+   BACKGROUND ILLUSTRATION
+   ============================================ */
+.howitworks-bg-illustration {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 1;
+}
+
+.step-tools,
+.step-hands,
+.step-product {
+  opacity: 1;
+}
+
+.flow-lines {
+  opacity: 0.8;
+}
+
+.bottom-decor {
+  opacity: 0.6;
+}
+
+.corner-elements {
+  opacity: 0.5;
+}
+
+/* ============================================
+   CONTENT WRAPPER
+   ============================================ */
+.howitworks-content-wrapper {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+  max-width: 900px;
+}
+
+/* Top Decorative Line */
+.howitworks-top-line {
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #c77b30, transparent);
+  margin-bottom: 32px;
+}
+
+/* English Title */
+.howitworks-english-title {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards;
+  animation-delay: 0.2s;
+}
+
+/* Animated Text Container */
+.howitworks-text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  perspective: 1000px;
+}
+
+.howitworks-text-container.transitioning .text-block {
+  animation: textExit 0.6s cubic-bezier(0.55, 0.055, 0.675, 0.19) forwards;
+}
+
+.howitworks-text-container .text-block {
+  animation: textEnter 1s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.howitworks-animated-text.line-1 {
+  animation: lineReveal 1s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.howitworks-animated-text.line-2 {
+  animation: lineReveal 1s cubic-bezier(0.22, 0.61, 0.36, 1) 0.2s both;
+}
+
+@keyframes textEnter {
+  0% {
+    opacity: 0;
+    transform: translateY(50px) rotateX(15deg);
+    filter: blur(10px);
+  }
+  30% {
+    opacity: 0.4;
+    filter: blur(5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) rotateX(0deg);
+    filter: blur(0);
+  }
+}
+
+@keyframes textExit {
+  0% {
+    opacity: 1;
+    transform: translateY(0) rotateX(0deg);
+    filter: blur(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-30px) rotateX(-10deg);
+    filter: blur(8px);
+  }
+}
+
+@keyframes lineReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+    filter: blur(6px);
+    letter-spacing: 0.1em;
+  }
+  50% {
+    opacity: 0.7;
+    filter: blur(2px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+    letter-spacing: normal;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* CTA Button */
+.howitworks-cta {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards;
+  animation-delay: 0.6s;
+}
+
+/* ============================================
+   BOTTOM DECORATIVE ELEMENT
+   ============================================ */
+.howitworks-bottom-deco {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 48px;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards;
+  animation-delay: 0.8s;
+}
+
+.howitworks-bottom-deco .deco-line {
+  width: 40px;
+  height: 1px;
+  background: rgba(199, 123, 48, 0.4);
+}
+
+.howitworks-bottom-deco .deco-diamond {
+  width: 8px;
+  height: 8px;
+  background: #c77b30;
+  transform: rotate(45deg);
+  opacity: 0.6;
+}
+
+/* ============================================
+   RESPONSIVE STYLES
+   ============================================ */
+@media (max-width: 900px) {
+  .howitworks-content-wrapper {
+    padding: 30px 20px;
+  }
+
+  .howitworks-bg-illustration {
+    opacity: 0.8;
+  }
+}
+
+@media (max-width: 600px) {
+  .howitworks-section {
+    padding: 60px 0;
+  }
+
+  .howitworks-content-wrapper {
+    padding: 20px 16px;
+  }
+
+  .howitworks-bottom-deco {
+    justify-content: center;
+    margin-top: 32px;
+  }
+
+  .howitworks-bg-illustration {
+    opacity: 0.6;
+  }
+}
+
+/* ============================================
+   PREFERS REDUCED MOTION
+   ============================================ */
+@media (prefers-reduced-motion: reduce) {
+  .howitworks-english-title,
+  .howitworks-cta,
+  .howitworks-bottom-deco {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+
+  .howitworks-text-container .text-block,
+  .howitworks-animated-text.line-1,
+  .howitworks-animated-text.line-2 {
+    animation: none;
+  }
+}

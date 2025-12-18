@@ -19,12 +19,12 @@ createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <Provider store={store}>
       <GoogleOAuthProvider clientId={GOOGLE_CLIENT_ID}>
-        <ThemeProvider theme={theme}>
-          <CssBaseline />
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
           <BrowserRouter>
-            <App />
+      <App />
           </BrowserRouter>
-        </ThemeProvider>
+    </ThemeProvider>
       </GoogleOAuthProvider>
     </Provider>
   </StrictMode>
