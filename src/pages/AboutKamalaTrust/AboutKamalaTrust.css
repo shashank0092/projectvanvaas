@@ -1,0 +1,209 @@
+/* ============================================
+   ABOUT KAMALA TRUST PAGE
+   ============================================ */
+.about-trust-page {
+  background-color: #f5efe3;
+  min-height: 100vh;
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+.trust-hero {
+  position: relative;
+  min-height: 55vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #2a2520 0%, #1b1b1b 100%);
+  overflow: hidden;
+  padding: 140px 24px 80px;
+}
+
+.trust-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at center,
+    transparent 0%,
+    rgba(27, 27, 27, 0.3) 100%
+  );
+  z-index: 1;
+}
+
+.trust-hero-illustration {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+  opacity: 0.8;
+}
+
+.trust-hero-content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  max-width: 900px;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============================================
+   ABOUT SECTION
+   ============================================ */
+.trust-about-section {
+  padding: 80px 24px;
+  background: #fff;
+}
+
+.trust-content-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* ============================================
+   FOUNDERS SECTION
+   ============================================ */
+.trust-founders-section {
+  padding: 80px 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.founder-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(199, 123, 48, 0.1);
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+.founder-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+.founder-image-wrapper {
+  background: linear-gradient(
+    135deg,
+    rgba(199, 123, 48, 0.1) 0%,
+    rgba(139, 90, 43, 0.05) 100%
+  );
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.founder-image-placeholder {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border: 3px solid rgba(199, 123, 48, 0.2);
+}
+
+.founder-content {
+  padding: 32px;
+}
+
+/* ============================================
+   IMPACT SECTION
+   ============================================ */
+.trust-impact-section {
+  padding: 80px 24px;
+  background: linear-gradient(135deg, #2a2520 0%, #1b1b1b 100%);
+}
+
+.impact-item {
+  text-align: center;
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.impact-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-4px);
+}
+
+/* ============================================
+   RESPONSIVE STYLES
+   ============================================ */
+@media (max-width: 900px) {
+  .trust-hero {
+    min-height: 50vh;
+    padding: 120px 20px 60px;
+  }
+
+  .trust-about-section {
+    padding: 60px 20px;
+  }
+
+  .trust-founders-section {
+    padding: 60px 20px;
+  }
+
+  .founder-content {
+    padding: 24px;
+  }
+
+  .trust-impact-section {
+    padding: 60px 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .trust-hero {
+    min-height: 45vh;
+    padding: 100px 16px 50px;
+  }
+
+  .trust-about-section {
+    padding: 48px 16px;
+  }
+
+  .trust-founders-section {
+    padding: 48px 16px;
+  }
+
+  .founder-image-wrapper {
+    padding: 32px;
+  }
+
+  .founder-image-placeholder {
+    width: 120px;
+    height: 120px;
+  }
+
+  .founder-content {
+    padding: 20px;
+  }
+
+  .trust-impact-section {
+    padding: 48px 16px;
+  }
+
+  .impact-item {
+    padding: 16px;
+  }
+}

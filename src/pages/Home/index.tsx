@@ -4,10 +4,8 @@ import { gsap } from "gsap";
 import Header from "../../components/Header";
 import HeroSection from "./HeroSection";
 import WhyWeExist from "./WhyWeExist";
-import ArtisanStories from "./ArtisanStories";
-import Collections from "./Collections";
+// import Collections from "./Collections";
 import FeaturedCreations from "./FeaturedCreations";
-import OurImpact from "./OurImpact";
 import HowItWorks from "./HowItWorks";
 import TrustSection from "./TrustSection";
 import CallToAction from "./CallToAction";
@@ -18,7 +16,7 @@ const Home = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [currentSection, setCurrentSection] = useState(0);
   const isScrolling = useRef(false);
-  const totalSections = 10;
+  const totalSections = 7;
 
   useEffect(() => {
     const container = containerRef.current;
@@ -167,21 +165,19 @@ const Home = () => {
         <WhyWeExist />
       </Box>
 
-      <Box className="scroll-section">
+      {/* <Box className="scroll-section">
         <ArtisanStories />
-      </Box>
+      </Box> */}
 
-      <Box className="scroll-section">
-        <Collections />
-      </Box>
+      {/* <Box className="scroll-section"><Collections /></Box> */}
 
       <Box className="scroll-section">
         <FeaturedCreations />
       </Box>
 
-      <Box className="scroll-section">
+      {/* <Box className="scroll-section">
         <OurImpact />
-      </Box>
+      </Box> */}
 
       <Box className="scroll-section">
         <HowItWorks />

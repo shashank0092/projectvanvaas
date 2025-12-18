@@ -1,0 +1,217 @@
+/* ============================================
+   ARTISAN DETAIL PAGE
+   ============================================ */
+.artisan-detail-page {
+  background-color: #f5efe3;
+  min-height: 100vh;
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+.artisan-hero {
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  padding: 140px 24px 80px;
+}
+
+.artisan-hero-content {
+  text-align: center;
+  max-width: 700px;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============================================
+   MAIN CONTENT
+   ============================================ */
+.artisan-main-content {
+  padding: 60px 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.artisan-section {
+  margin-bottom: 48px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid rgba(199, 123, 48, 0.1);
+}
+
+.artisan-section:last-child {
+  border-bottom: none;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.awards-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* ============================================
+   PRODUCT CARDS
+   ============================================ */
+.product-card-mini {
+  cursor: pointer;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(199, 123, 48, 0.1);
+}
+
+.product-card-mini:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.product-mini-image {
+  height: 200px;
+  object-fit: cover;
+}
+
+.product-mini-content {
+  padding: 16px;
+}
+
+/* ============================================
+   SIDEBAR
+   ============================================ */
+.artisan-sidebar {
+  position: sticky;
+  top: 100px;
+}
+
+.sidebar-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(199, 123, 48, 0.1);
+}
+
+.profile-card {
+  text-align: center;
+}
+
+.sidebar-profile-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(199, 123, 48, 0.3);
+}
+
+.impact-card {
+  background: linear-gradient(
+    135deg,
+    rgba(199, 123, 48, 0.05) 0%,
+    rgba(139, 90, 43, 0.03) 100%
+  );
+}
+
+.impact-mini-stats {
+  display: flex;
+  gap: 24px;
+}
+
+.mini-stat {
+  flex: 1;
+  text-align: center;
+}
+
+.mini-stat-value {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #c77b30;
+}
+
+.mini-stat-label {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.7rem;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 4px;
+}
+
+/* ============================================
+   NOT FOUND
+   ============================================ */
+.artisan-not-found {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 100px 24px;
+}
+
+/* ============================================
+   RESPONSIVE STYLES
+   ============================================ */
+@media (max-width: 900px) {
+  .artisan-hero {
+    min-height: 45vh;
+    padding: 120px 20px 60px;
+  }
+
+  .artisan-main-content {
+    padding: 48px 20px;
+  }
+
+  .artisan-sidebar {
+    position: static;
+  }
+
+  .artisan-section {
+    margin-bottom: 36px;
+    padding-bottom: 36px;
+  }
+}
+
+@media (max-width: 600px) {
+  .artisan-hero {
+    min-height: 40vh;
+    padding: 100px 16px 50px;
+  }
+
+  .artisan-main-content {
+    padding: 32px 16px;
+  }
+
+  .sidebar-card {
+    padding: 20px;
+  }
+
+  .impact-mini-stats {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .product-mini-image {
+    height: 160px;
+  }
+}
