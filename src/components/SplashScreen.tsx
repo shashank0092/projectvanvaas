@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Box, Typography, Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { FaCrown } from "react-icons/fa";
+import KamalaLogo from "../assets/Kamalatrustlogo.png";
 import "./SplashScreen.css";
 
 interface SplashScreenProps {
@@ -62,11 +63,11 @@ const SplashScreen = ({ onComplete }: SplashScreenProps) => {
       <Box className="bg-heritage bg-heritage--paisley" />
 
       <Box
-        className="lotus-container lotus-bounce"
+        className="logo-container"
         sx={{
           position: "relative",
-          width: { xs: "320px", sm: "400px", md: "480px" },
-          height: { xs: "260px", sm: "320px", md: "380px" },
+          width: { xs: "200px", sm: "260px", md: "320px" },
+          height: { xs: "200px", sm: "260px", md: "320px" },
           mb: { xs: 3, sm: 4 },
           display: "flex",
           alignItems: "center",
@@ -74,104 +75,34 @@ const SplashScreen = ({ onComplete }: SplashScreenProps) => {
           zIndex: 3,
         }}
       >
-        {/* Pink Glow Effect Layers */}
+        {/* Glow Effect */}
         <Box
-          className="lotus-glow"
           sx={{
             position: "absolute",
             width: "100%",
             height: "100%",
             borderRadius: "50%",
             background:
-              "radial-gradient(circle, rgba(255,182,193,0.4) 0%, rgba(255,182,193,0.2) 40%, transparent 70%)",
+              "radial-gradient(circle, rgba(199,123,48,0.3) 0%, rgba(199,123,48,0.15) 40%, transparent 70%)",
             filter: "blur(25px)",
             zIndex: 0,
             animation: "glowPulse 3s ease-in-out infinite",
           }}
         />
         <Box
-          className="lotus-glow"
+          component="img"
+          src={KamalaLogo}
+          alt="Kamala Trust Logo"
           sx={{
-            position: "absolute",
-            width: "120%",
-            height: "120%",
-            borderRadius: "50%",
-            background:
-              "radial-gradient(circle, rgba(255,182,193,0.25) 0%, rgba(255,182,193,0.15) 50%, transparent 80%)",
-            filter: "blur(35px)",
-            zIndex: 0,
-            animation: "glowPulse 4s ease-in-out infinite 0.5s",
-          }}
-        />
-        <Box
-          className="lotus-glow"
-          sx={{
-            position: "absolute",
-            width: "140%",
-            height: "140%",
-            borderRadius: "50%",
-            background:
-              "radial-gradient(circle, rgba(255,182,193,0.15) 0%, transparent 60%)",
-            filter: "blur(45px)",
-            zIndex: 0,
-            animation: "glowPulse 5s ease-in-out infinite 1s",
-          }}
-        />
-
-        <svg
-          viewBox="0 0 300 200"
-          style={{
             width: "100%",
             height: "100%",
-            overflow: "visible",
+            objectFit: "contain",
             position: "relative",
             zIndex: 1,
+            animation:
+              "logoFadeIn 1s ease forwards, logoBounce 3s ease-in-out infinite 1s",
           }}
-        >
-          <g transform="translate(150, 150) scale(1.2)">
-            {/* Center Petal */}
-              <path
-              className="lotus-path"
-              d="M 0,-10 C -15,-30 -15,-60 0,-90 C 15,-60 15,-30 0,-10"
-            />
-
-            {/* Inner Left Petal */}
-              <path
-              className="lotus-path"
-              d="M -10,-5 C -35,-25 -45,-55 -30,-80 C -25,-60 -10,-35 -5,-15"
-            />
-            {/* Inner Right Petal */}
-              <path
-              className="lotus-path"
-              d="M 10,-5 C 35,-25 45,-55 30,-80 C 25,-60 10,-35 5,-15"
-          />
-
-            {/* Middle Left Petal */}
-            <path
-              className="lotus-path"
-              d="M -20,0 C -50,-10 -70,-40 -60,-70 C -60,-50 -40,-20 -15,-5"
-            />
-            {/* Middle Right Petal */}
-                <path
-              className="lotus-path"
-              d="M 20,0 C 50,-10 70,-40 60,-70 C 60,-50 40,-20 15,-5"
-            />
-
-            {/* Outer Left Bottom Petal */}
-                <path
-              className="lotus-path"
-              d="M -25,5 C -60,5 -85,-15 -80,-40 C -75,-25 -50,10 -10,0"
-            />
-            {/* Outer Right Bottom Petal */}
-                <path
-              className="lotus-path"
-              d="M 25,5 C 60,5 85,-15 80,-40 C 75,-25 50,10 10,0"
-                />
-
-            {/* Base curve */}
-            <path className="lotus-path" d="M -25,5 Q 0,15 25,5" />
-          </g>
-        </svg>
+        />
       </Box>
 
       {/* Title and CTA */}
@@ -244,7 +175,7 @@ const SplashScreen = ({ onComplete }: SplashScreenProps) => {
           >
             An Initiative by
           </Typography>
-        <Typography
+          <Typography
             sx={{
               fontFamily: '"Poppins", "Arial", sans-serif',
               fontSize: { xs: "16px", sm: "17px", md: "18px" },
