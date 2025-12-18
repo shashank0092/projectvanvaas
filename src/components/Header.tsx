@@ -36,7 +36,7 @@ const Header = () => {
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   const [mobileOpen, setMobileOpen] = useState(false);
   const [aboutAnchor, setAboutAnchor] = useState<null | HTMLElement>(null);
-  const [impactAnchor, setImpactAnchor] = useState<null | HTMLElement>(null);
+  const [, setImpactAnchor] = useState<null | HTMLElement>(null);
   const [userMenuAnchor, setUserMenuAnchor] = useState<null | HTMLElement>(
     null
   );
@@ -90,27 +90,6 @@ const Header = () => {
     setImpactAnchor(event.currentTarget);
   };
 
-  const handleImpactMenuClose = () => {
-    // Add delay to allow moving to menu
-    if (impactMenuTimeoutRef.current) {
-      clearTimeout(impactMenuTimeoutRef.current);
-    }
-    impactMenuTimeoutRef.current = setTimeout(() => {
-      setImpactAnchor(null);
-      impactMenuTimeoutRef.current = null;
-    }, 200);
-  };
-
-  const handleImpactMenuToggle = (event: React.MouseEvent<HTMLElement>) => {
-    event.preventDefault();
-    event.stopPropagation();
-    if (impactAnchor) {
-      setImpactAnchor(null);
-    } else {
-      setImpactAnchor(event.currentTarget);
-    }
-  };
-
   const handleUserMenuOpen = (event: React.MouseEvent<HTMLElement>) => {
     setUserMenuAnchor(event.currentTarget);
   };
@@ -146,11 +125,11 @@ const Header = () => {
   const navigationItems = [
     { label: "Home", path: "/home" },
     { label: "Shop", path: "/shop" },
-    { label: "All Artworks", path: "/all-artworks" },
-    { label: "Categories", path: "/categories" },
+    // { label: "All Artworks", path: "/all-artworks" },
+    // { label: "Categories", path: "/categories" },
     { label: "Artists", path: "/artists" },
-    { label: "Meet Our Artists", path: "/meet-our-artists" },
-    { label: "Stories of Craft", path: "/stories-of-craft" },
+    // { label: "Meet Our Artists", path: "/meet-our-artists" },
+    // { label: "Stories of Craft", path: "/stories-of-craft" },
     { label: "Contact", path: "/contact" },
   ];
 
@@ -399,7 +378,7 @@ const Header = () => {
               </Box>
 
               {/* Impact Menu */}
-              <Box
+              {/* <Box
                 onMouseEnter={handleImpactMenuOpen}
                 onMouseLeave={handleImpactMenuClose}
                 sx={{ position: "relative" }}
@@ -545,7 +524,7 @@ const Header = () => {
                     Artisan Empowerment
                   </MenuItem>
                 </Menu>
-              </Box>
+              </Box> */}
             </Box>
           )}
 

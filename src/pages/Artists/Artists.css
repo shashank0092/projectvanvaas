@@ -1,0 +1,351 @@
+/* ============================================
+   ARTISTS PAGE
+   ============================================ */
+.artists-page {
+  background-color: #f5efe3;
+  min-height: 100vh;
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+.artists-hero {
+  position: relative;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #2a2520 0%, #1b1b1b 100%);
+  overflow: hidden;
+  padding: 140px 24px 100px;
+}
+
+.artists-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at center,
+    transparent 0%,
+    rgba(27, 27, 27, 0.3) 100%
+  );
+  z-index: 1;
+}
+
+.artists-hero-illustration {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+  opacity: 0.8;
+}
+
+.artists-hero-content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  max-width: 800px;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============================================
+   INTRO SECTION
+   ============================================ */
+.artists-intro {
+  padding: 60px 24px;
+  display: flex;
+  justify-content: center;
+  background: #faf8f5;
+  border-bottom: 1px solid rgba(199, 123, 48, 0.1);
+}
+
+/* ============================================
+   ARTISTS GRID
+   ============================================ */
+.artists-grid-section {
+  padding: 60px 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.artisan-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(199, 123, 48, 0.1);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.artisan-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+}
+
+.artisan-image-wrapper {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1;
+}
+
+.artisan-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.artisan-card:hover .artisan-image {
+  transform: scale(1.05);
+}
+
+.artisan-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 16px;
+  background: linear-gradient(transparent, rgba(27, 27, 27, 0.8));
+}
+
+.artisan-experience {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.8rem;
+  color: #fff;
+  font-weight: 500;
+}
+
+.artisan-content {
+  padding: 24px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.artisan-bio {
+  flex: 1;
+}
+
+.artisan-stats {
+  display: flex;
+  gap: 24px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(199, 123, 48, 0.1);
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-value {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #c77b30;
+}
+
+.stat-label {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.7rem;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ============================================
+   IMPACT SECTION
+   ============================================ */
+.artists-impact-section {
+  padding: 80px 24px;
+  text-align: center;
+  background: linear-gradient(
+    135deg,
+    rgba(199, 123, 48, 0.05) 0%,
+    rgba(139, 90, 43, 0.03) 100%
+  );
+  border-top: 1px solid rgba(199, 123, 48, 0.1);
+}
+
+.impact-stats {
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+  flex-wrap: wrap;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.impact-stat {
+  text-align: center;
+  min-width: 150px;
+}
+
+.impact-number {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 3rem;
+  font-weight: 600;
+  color: #c77b30;
+  line-height: 1;
+}
+
+.impact-label {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 8px;
+}
+
+/* ============================================
+   CTA SECTION
+   ============================================ */
+.artists-cta-section {
+  padding: 100px 24px;
+  text-align: center;
+  background: linear-gradient(135deg, #2a2520 0%, #1b1b1b 100%);
+}
+
+/* ============================================
+   RESPONSIVE STYLES
+   ============================================ */
+@media (max-width: 900px) {
+  .artists-hero {
+    min-height: 55vh;
+    padding: 120px 20px 80px;
+  }
+
+  .artists-intro {
+    padding: 48px 20px;
+  }
+
+  .artists-grid-section {
+    padding: 48px 20px;
+  }
+
+  .artists-impact-section {
+    padding: 60px 20px;
+  }
+
+  .impact-stats {
+    gap: 32px;
+  }
+
+  .artists-cta-section {
+    padding: 80px 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .artists-hero {
+    min-height: 50vh;
+    padding: 100px 16px 60px;
+  }
+
+  .artists-intro {
+    padding: 40px 16px;
+  }
+
+  .artists-grid-section {
+    padding: 40px 16px;
+  }
+
+  .artisan-content {
+    padding: 20px;
+  }
+
+  .artisan-stats {
+    gap: 16px;
+  }
+
+  .impact-stats {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .impact-number {
+    font-size: 2.5rem;
+  }
+
+  .artists-impact-section {
+    padding: 48px 16px;
+  }
+
+  .artists-cta-section {
+    padding: 60px 16px;
+  }
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+.artisan-card {
+  opacity: 0;
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.artisan-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.artisan-card:nth-child(2) {
+  animation-delay: 0.15s;
+}
+.artisan-card:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.artisan-card:nth-child(4) {
+  animation-delay: 0.25s;
+}
+.artisan-card:nth-child(5) {
+  animation-delay: 0.3s;
+}
+.artisan-card:nth-child(6) {
+  animation-delay: 0.35s;
+}
+.artisan-card:nth-child(7) {
+  animation-delay: 0.4s;
+}
+.artisan-card:nth-child(8) {
+  animation-delay: 0.45s;
+}
+.artisan-card:nth-child(9) {
+  animation-delay: 0.5s;
+}
+.artisan-card:nth-child(10) {
+  animation-delay: 0.55s;
+}
+.artisan-card:nth-child(11) {
+  animation-delay: 0.6s;
+}
+.artisan-card:nth-child(12) {
+  animation-delay: 0.65s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .artists-hero-content,
+  .artisan-card {
+    animation: none;
+    opacity: 1;
+  }
+
+  .artisan-card:hover {
+    transform: none;
+  }
+
+  .artisan-card:hover .artisan-image {
+    transform: none;
+  }
+}

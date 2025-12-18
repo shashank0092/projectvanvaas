@@ -16,6 +16,8 @@ import ArtisanEmpowerment from "./pages/ArtisanEmpowerment";
 import Contact from "./pages/Contact";
 import Cart from "./pages/Cart";
 import MyAccount from "./pages/MyAccount";
+import ProductDetail from "./pages/ProductDetail";
+import ArtisanDetail from "./pages/ArtisanDetail";
 
 const SplashRoute = () => {
   const navigate = useNavigate();
@@ -52,6 +54,8 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/my-account" element={<MyAccount />} />
+        <Route path="/product/:id" element={<ProductDetail />} />
+        <Route path="/artisan/:id" element={<ArtisanDetail />} />
       </Routes>
       <ConfirmModal />
     </>
