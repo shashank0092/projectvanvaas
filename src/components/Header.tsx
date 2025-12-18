@@ -16,6 +16,7 @@ import {
   ListItemText,
   Avatar,
   Badge,
+  Collapse,
 } from "@mui/material";
 import { useNavigate, useLocation } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../store/hooks";
@@ -36,14 +37,11 @@ const Header = () => {
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   const [mobileOpen, setMobileOpen] = useState(false);
   const [aboutAnchor, setAboutAnchor] = useState<null | HTMLElement>(null);
-  const [, setImpactAnchor] = useState<null | HTMLElement>(null);
+
   const [userMenuAnchor, setUserMenuAnchor] = useState<null | HTMLElement>(
     null
   );
   const aboutMenuTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(
-    null
-  );
-  const impactMenuTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(
     null
   );
 
@@ -77,17 +75,6 @@ const Header = () => {
     } else {
       setAboutAnchor(event.currentTarget);
     }
-  };
-
-  const handleImpactMenuOpen = (event: React.MouseEvent<HTMLElement>) => {
-    // Clear any pending timeout
-    if (impactMenuTimeoutRef.current) {
-      clearTimeout(impactMenuTimeoutRef.current);
-      impactMenuTimeoutRef.current = null;
-    }
-    event.preventDefault();
-    event.stopPropagation();
-    setImpactAnchor(event.currentTarget);
   };
 
   const handleUserMenuOpen = (event: React.MouseEvent<HTMLElement>) => {
@@ -133,8 +120,10 @@ const Header = () => {
     { label: "Contact", path: "/contact" },
   ];
 
+  const [mobileAboutOpen, setMobileAboutOpen] = useState(false);
+
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
+    <Box sx={{ textAlign: "center" }}>
       <Box
         component="img"
         src={logo}
@@ -144,7 +133,10 @@ const Header = () => {
           margin: "16px auto",
           cursor: "pointer",
         }}
-        onClick={() => navigate("/home")}
+        onClick={() => {
+          navigate("/home");
+          setMobileOpen(false);
+        }}
       />
       <List>
         {navigationItems.map((item) => (
@@ -155,21 +147,70 @@ const Header = () => {
                 setMobileOpen(false);
               }}
               selected={location.pathname === item.path}
+              sx={{
+                "&.Mui-selected": {
+                  backgroundColor: "rgba(199, 123, 48, 0.1)",
+                  color: "#C77B30",
+                },
+                "&:hover": {
+                  backgroundColor: "rgba(199, 123, 48, 0.08)",
+                },
+              }}
             >
               <ListItemText primary={item.label} />
             </ListItemButton>
           </ListItem>
         ))}
+
+        {/* About Us with Expandable Children */}
         <ListItem disablePadding>
-          <ListItemButton onClick={handleAboutMenuOpen}>
+          <ListItemButton
+            onClick={() => setMobileAboutOpen(!mobileAboutOpen)}
+            sx={{
+              "&:hover": {
+                backgroundColor: "rgba(199, 123, 48, 0.08)",
+              },
+            }}
+          >
             <ListItemText primary="About Us" />
+            <ArrowDropDownIcon
+              sx={{
+                transform: mobileAboutOpen ? "rotate(180deg)" : "rotate(0deg)",
+                transition: "transform 0.3s ease",
+              }}
+            />
           </ListItemButton>
         </ListItem>
-        <ListItem disablePadding>
-          <ListItemButton onClick={handleImpactMenuOpen}>
-            <ListItemText primary="Impact" />
-          </ListItemButton>
-        </ListItem>
+
+        {/* About Us Children */}
+        <Collapse in={mobileAboutOpen} timeout="auto" unmountOnExit>
+          <List component="div" disablePadding>
+            <ListItemButton
+              sx={{ pl: 4 }}
+              onClick={() => {
+                navigate("/about-vanvaas");
+                setMobileOpen(false);
+              }}
+            >
+              <ListItemText
+                primary="About Vanvaas"
+                primaryTypographyProps={{ fontSize: "0.9rem" }}
+              />
+            </ListItemButton>
+            <ListItemButton
+              sx={{ pl: 4 }}
+              onClick={() => {
+                navigate("/about-kamala-trust");
+                setMobileOpen(false);
+              }}
+            >
+              <ListItemText
+                primary="About Kamala Trust"
+                primaryTypographyProps={{ fontSize: "0.9rem" }}
+              />
+            </ListItemButton>
+          </List>
+        </Collapse>
       </List>
     </Box>
   );
