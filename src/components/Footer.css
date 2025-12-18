@@ -1,0 +1,268 @@
+/* ============================================
+   FOOTER STYLES
+   ============================================ */
+.footer {
+  background: linear-gradient(180deg, #2a2520 0%, #1b1b1b 100%);
+  position: relative;
+  overflow: hidden;
+  padding: 60px 0 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  animation: footerFadeIn 0.8s ease forwards;
+}
+
+@keyframes footerFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* ============================================
+   BACKGROUND ILLUSTRATION
+   ============================================ */
+.footer-bg-illustration {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 1;
+}
+
+.handloom-left,
+.craft-right {
+  opacity: 0.8;
+}
+
+.traditional-center {
+  opacity: 0.6;
+}
+
+.border-pattern {
+  opacity: 0.5;
+}
+
+/* ============================================
+   FOOTER CONTENT
+   ============================================ */
+.footer-content {
+  position: relative;
+  z-index: 10;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ============================================
+   BRAND COLUMN
+   ============================================ */
+.footer-brand {
+  padding-right: 20px;
+}
+
+.brand-name {
+  position: relative;
+}
+
+.brand-name::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background: linear-gradient(90deg, #c77b30, transparent);
+}
+
+/* ============================================
+   FOOTER COLUMNS
+   ============================================ */
+.footer-column {
+  padding-right: 20px;
+}
+
+.column-title {
+  position: relative;
+  padding-bottom: 12px;
+}
+
+.column-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 30px;
+  height: 1px;
+  background: rgba(199, 123, 48, 0.5);
+}
+
+/* ============================================
+   FOOTER LINKS
+   ============================================ */
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-link {
+  font-family: "Poppins", sans-serif !important;
+  font-size: 0.9rem !important;
+  color: rgba(245, 239, 227, 0.8) !important;
+  text-decoration: none !important;
+  transition: all 0.3s ease !important;
+  position: relative;
+  display: inline-block;
+  width: fit-content;
+}
+
+.footer-link::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #c77b30;
+  transition: width 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #c77b30 !important;
+}
+
+.footer-link:hover::after {
+  width: 100%;
+}
+
+/* ============================================
+   FOOTER DIVIDER
+   ============================================ */
+.footer-divider {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(199, 123, 48, 0.3),
+    transparent
+  );
+  margin: 48px 0 24px;
+}
+
+/* ============================================
+   FOOTER BOTTOM BAR
+   ============================================ */
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.copyright,
+.trust-credit {
+  opacity: 0;
+  animation: fadeIn 0.6s ease forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* ============================================
+   RESPONSIVE STYLES
+   ============================================ */
+@media (max-width: 900px) {
+  .footer {
+    padding: 48px 0 0;
+  }
+
+  .footer-content {
+    padding: 0 20px;
+  }
+
+  .footer-brand,
+  .footer-column {
+    padding-right: 0;
+  }
+
+  .footer-bg-illustration {
+    opacity: 0.6;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer {
+    padding: 40px 0 0;
+  }
+
+  .footer-content {
+    padding: 0 16px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+
+  .footer-divider {
+    margin: 32px 0 20px;
+  }
+
+  .footer-bg-illustration {
+    opacity: 0.4;
+  }
+
+  .brand-name::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+/* ============================================
+   ACCESSIBILITY
+   ============================================ */
+.footer-link:focus {
+  outline: 2px solid #c77b30;
+  outline-offset: 2px;
+}
+
+.footer-link:focus-visible {
+  outline: 2px solid #c77b30;
+  outline-offset: 2px;
+}
+
+/* ============================================
+   PREFERS REDUCED MOTION
+   ============================================ */
+@media (prefers-reduced-motion: reduce) {
+  .footer,
+  .copyright,
+  .trust-credit {
+    animation: none;
+    opacity: 1;
+  }
+
+  .footer-link::after {
+    transition: none;
+  }
+
+  .footer-link {
+    transition: none !important;
+  }
+}
