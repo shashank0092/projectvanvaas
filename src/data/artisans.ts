@@ -22,7 +22,7 @@ export const artisans: Artisan[] = [
     name: "Lakshmi Devi",
     craft: "Silk Weaving",
     location: "Varanasi, Uttar Pradesh",
-    image: "https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?w=400",
+    image: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=400",
     coverImage:
       "https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=800",
     experience: "25+ years",
@@ -48,7 +48,7 @@ export const artisans: Artisan[] = [
     name: "Ramesh Kumar",
     craft: "Terracotta Pottery",
     location: "Jaipur, Rajasthan",
-    image: "https://images.unsplash.com/photo-1605721911519-3dfeb3be25e7?w=400",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400",
     coverImage:
       "https://images.unsplash.com/photo-1604422999920-0547d8b5a323?w=800",
     experience: "30+ years",
@@ -77,7 +77,7 @@ export const artisans: Artisan[] = [
     name: "Suresh Vishwakarma",
     craft: "Wood Carving",
     location: "Mysore, Karnataka",
-    image: "https://images.unsplash.com/photo-1584727638096-042c45049ebe?w=400",
+    image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400",
     coverImage:
       "https://images.unsplash.com/photo-1602491453631-e2a5ad90a131?w=800",
     experience: "35+ years",
@@ -103,7 +103,7 @@ export const artisans: Artisan[] = [
     name: "Sita Kumari",
     craft: "Madhubani Painting",
     location: "Jitwarpur, Bihar",
-    image: "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=400",
+    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400",
     coverImage:
       "https://images.unsplash.com/photo-1578926375605-eaf7559b1458?w=800",
     experience: "28+ years",
@@ -133,7 +133,7 @@ export const artisans: Artisan[] = [
     name: "Mohan Lal",
     craft: "Brass Work",
     location: "Moradabad, Uttar Pradesh",
-    image: "https://images.unsplash.com/photo-1567696911980-2eed69a46042?w=400",
+    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400",
     coverImage:
       "https://images.unsplash.com/photo-1567696911980-2eed69a46042?w=800",
     experience: "40+ years",
@@ -159,7 +159,7 @@ export const artisans: Artisan[] = [
     name: "Fatima Begum",
     craft: "Block Printing",
     location: "Jaipur, Rajasthan",
-    image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=400",
+    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400",
     coverImage:
       "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800",
     experience: "20+ years",
@@ -185,7 +185,7 @@ export const artisans: Artisan[] = [
     name: "Biswanath Mahato",
     craft: "Dhokra Art",
     location: "Bankura, West Bengal",
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400",
+    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400",
     coverImage:
       "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800",
     experience: "32+ years",
@@ -209,7 +209,7 @@ export const artisans: Artisan[] = [
     name: "Abdul Rashid",
     craft: "Papier Mâché",
     location: "Srinagar, Kashmir",
-    image: "https://images.unsplash.com/photo-1513519245088-0e12902e35a6?w=400",
+    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400",
     coverImage:
       "https://images.unsplash.com/photo-1513519245088-0e12902e35a6?w=800",
     experience: "40+ years",
@@ -235,7 +235,7 @@ export const artisans: Artisan[] = [
     name: "Jivya Soma Mashe",
     craft: "Warli Art",
     location: "Dahanu, Maharashtra",
-    image: "https://images.unsplash.com/photo-1578926375605-eaf7559b1458?w=400",
+    image: "https://images.unsplash.com/photo-1552058544-f2b08422138a?w=400",
     coverImage:
       "https://images.unsplash.com/photo-1578926375605-eaf7559b1458?w=800",
     experience: "35+ years",
@@ -264,7 +264,7 @@ export const artisans: Artisan[] = [
     name: "Nasreen Bano",
     craft: "Chikankari Embroidery",
     location: "Lucknow, Uttar Pradesh",
-    image: "https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?w=400",
+    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400",
     coverImage:
       "https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?w=800",
     experience: "25+ years",
@@ -290,7 +290,7 @@ export const artisans: Artisan[] = [
     name: "Kripal Singh",
     craft: "Blue Pottery",
     location: "Jaipur, Rajasthan",
-    image: "https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=400",
+    image: "https://images.unsplash.com/photo-1566492031773-4f4e44671857?w=400",
     coverImage:
       "https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=800",
     experience: "38+ years",
@@ -316,7 +316,7 @@ export const artisans: Artisan[] = [
     name: "Ghulam Ahmad",
     craft: "Pashmina Weaving",
     location: "Srinagar, Kashmir",
-    image: "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?w=400",
+    image: "https://images.unsplash.com/photo-1542909168-82c3e7fdca5c?w=400",
     coverImage:
       "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?w=800",
     experience: "45+ years",
