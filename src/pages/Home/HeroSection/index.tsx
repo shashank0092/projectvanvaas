@@ -337,6 +337,49 @@ const HeroSection = () => {
           {/* Decorative Line */}
           <Box className="decorative-line" />
 
+          {/* Project Vanvaas Heading */}
+          <Typography
+            variant="h2"
+            sx={{
+              fontFamily:
+                '"Playfair Display", "Cormorant Garamond", Georgia, serif',
+              fontSize: {
+                xs: "1.8rem",
+                sm: "2.2rem",
+                md: "2.8rem",
+                lg: "3.2rem",
+              },
+              fontWeight: 600,
+              letterSpacing: { xs: "0.1em", md: "0.15em" },
+              lineHeight: 1.2,
+              background:
+                "linear-gradient(135deg, #8B4513 0%, #B8860B 30%, #DAA520 60%, #FFD700 100%)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              backgroundClip: "text",
+              textShadow:
+                "0 3px 12px rgba(218, 165, 32, 0.25), 0 1px 3px rgba(139, 69, 19, 0.2)",
+              textTransform: "uppercase",
+              mb: { xs: 1, md: 1.5 },
+              position: "relative",
+              display: "inline-block",
+              "&::after": {
+                content: '""',
+                position: "absolute",
+                bottom: "-8px",
+                left: "50%",
+                transform: "translateX(-50%)",
+                width: "60%",
+                height: "2px",
+                background:
+                  "linear-gradient(90deg, transparent, #DAA520, transparent)",
+                opacity: 0.6,
+              },
+            }}
+          >
+            Project Vanvaas
+          </Typography>
+
           {/* Main Headline */}
           <Typography
             variant="h1"
@@ -355,6 +398,7 @@ const HeroSection = () => {
               lineHeight: 1.15,
               color: "#1B1B1B",
               mb: { xs: 1.5, md: 2 },
+              mt: { xs: 2, md: 2.5 },
             }}
           >
             Crafted by Hands.
